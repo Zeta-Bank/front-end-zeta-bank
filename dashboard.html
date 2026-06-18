@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeta Bank - Dashboard</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <h1 class="brand">Zeta<span>Bank</span></h1>
+        <nav>
+          <span id="user-name">Carregando...</span>
+          <button id="logout-btn" class="btn btn-outline">Sair</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container dashboard-grid">
+      <!-- Saldo -->
+      <section class="card balance-card">
+        <h2>Saldo Atual</h2>
+        <div class="balance-container">
+          <span id="balance-value" class="balance hidden">R$ ••••••</span>
+          <button id="toggle-balance" class="btn-icon">Mostrar</button>
+        </div>
+      </section>
+
+      <!-- Transferência -->
+      <section class="card transfer-card">
+        <h2>Nova Transferência</h2>
+        <form id="transfer-form">
+          <div class="form-group">
+            <label for="pix-key-dest">Chave Pix do Destinatário</label>
+            <input
+              type="text"
+              id="pix-key-dest"
+              name="pix-key-dest"
+              placeholder="E-mail ou Chave Aleatória"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="amount">Valor (R$)</label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              step="0.01"
+              min="0.01"
+              placeholder="0,00"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Transferir</button>
+        </form>
+      </section>
+
+      <!-- Chaves Pix -->
+      <section class="card pix-keys-card">
+        <h2>Minhas Chaves Pix</h2>
+        <div class="pix-actions">
+          <select id="pix-type" class="form-control">
+            <option value="EMAIL">E-mail</option>
+            <option value="ALEATORIO">Aleatória</option>
+          </select>
+          <button id="create-pix-btn" class="btn btn-secondary">
+            Gerar Chave
+          </button>
+        </div>
+        <ul id="pix-keys-list" class="list-items">
+          <!-- Chaves Pix aparecerão aqui -->
+        </ul>
+      </section>
+
+      <!-- Histórico -->
+      <section class="card history-card">
+        <h2>Histórico de Transações</h2>
+        <div class="table-responsive">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>De/Para</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody id="history-list">
+              <!-- Transações aparecerão aqui -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
