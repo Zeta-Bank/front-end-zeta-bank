@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return `
                     <tr>
                         <td>${isOutcome ? `Para: ${t.destinatario}` : `De: ${t.remetente}`}</td>
-                        <td class="amount-negative">
+                        <td class="${isOutcome ? "amount-negative" : "amount-positive"}">
                             ${isOutcome ? "-" : "+"} ${UI.formatCurrency(t.moneyAmount)}
                         </td>
                     </tr>

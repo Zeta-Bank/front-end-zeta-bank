@@ -99,7 +99,7 @@
 }
 
 .history-table .amount-negative {
-  color: black;
+  color: var(--error-color);
   font-weight: 600;
 }
 
