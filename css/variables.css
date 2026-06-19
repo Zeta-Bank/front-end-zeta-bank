@@ -1,41 +1,47 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #0f172a;
-    --bg-color: #f8fafc;
-    --text-color: #1e293b;
-    --white: #ffffff;
-    --error-color: #ef4444;
-    --success-color: #22c55e;
-    --border-radius: 8px;
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --primary-color: #111111;
+  --secondary-color: #c8a96e;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --white: #ffffff;
+  --error-color: #ef4444;
+  --success-color: #22c55e;
+  --border-radius: 8px;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.5;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .brand {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--secondary-color);
 }
 
 .brand span {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
