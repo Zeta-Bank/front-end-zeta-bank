@@ -1,4 +1,5 @@
-@import 'variables.css';
-@import 'components/buttons.css';
-@import 'pages/auth.css';
-@import 'pages/dashboard.css';
+@import "variables.css";
+@import "components/buttons.css";
+@import "components/toast.css";
+@import "pages/auth.css";
+@import "pages/dashboard.css";
